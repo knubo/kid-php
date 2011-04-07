@@ -17,8 +17,10 @@ if(!$data) {
 
 echo json_encode($data["header"])."<br>";
 
-if(count($data["records"]) != 48) {
-    die("Bad amount of rows returned:".count($data["records"]));
+//echo json_encode($data["transactions"])."<br>";
+
+if(count($data["transactions"]) != 23) {
+    die("Bad amount of rows returned:".count($data["transactions"]));
 }
 
 ?>
