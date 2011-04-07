@@ -1,0 +1,22 @@
+This is a class for generating Norwegian KID payments and a class for reading transaction log files from Nets.
+
+There are two methods in particular that are of interest:
+
+generateKIDmod10 
+
+	Generates a KID using modulo 10. It is built using two set of numbers
+	that will be 0 left padded, and those combined is used when
+	calculating the checksum and the final kid.
+
+parseDatFile
+	This takes in a string containing the data file with the
+	transactions from Nets. It will return an array with
+	transactions and header information.
+
+The transaction file and the KID algorithm is described in the document downloaded here (Norwegian):
+http://www.bbs-nordic.com/upload/Systemspesifikasjon%20OCR%20giro.pdf
+
+This minor module is planned to be used by frittregnskap.no
+
+Knut Erik Borgen
+knutbo@ifi.uio.no
