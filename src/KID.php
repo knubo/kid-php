@@ -1,5 +1,7 @@
 <?php
 
+/* Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php */
+
 function logsubstr($str, $pos, $len) {
     return substr($str, $pos - 1, $len+1);
 }
@@ -60,11 +62,11 @@ class KID {
                 continue;
             }
 
-            
+
             if(!array_key_exists($transnr, $result)) {
                 $result[$transnr] = array();
             }
-            
+
             $trans = &$result[$transnr];
              
             if($recordType == "30") {
@@ -76,7 +78,7 @@ class KID {
             }
         }
 
-        
+
         return array_values($result);
     }
 
